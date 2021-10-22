@@ -65,11 +65,11 @@ body, html {
 
 
 
-@media (min-width: 1281px) {
+@media (min-width: 1000px) {
     .player-collum {
         width: 20%;
         padding-top: 2.75%;
-        float: left;
+        float: left;S
         padding-left: 15%;
         padding-top: 2.15%;
         text-align: left;
