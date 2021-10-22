@@ -1,0 +1,121 @@
+body {
+    margin: 0px;
+    font-family: arial;
+    background-image: url("blackjack_background.jpg");
+    background-color: #2B3E28;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+}
+
+.title {
+    background-color: #30140F;
+    color: whitesmoke;
+    margin: 0px;
+    padding: 16px;
+    text-align: center;
+    font-size: 3.2rem;
+
+    background-color: #04230F;
+    border-bottom: 20px solid #021408;
+    border-top: 20px solid #021408;
+    padding-top: 2%;
+    height: 8%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.game {
+    padding-top: 10%;
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.hitButton {
+    font-size: 150%;
+    background-color: #04230F;
+    color: white;
+    border-radius: 15%;
+    border: 10px solid black;
+}
+
+.stayButton {
+    font-size: 150%;
+    background-color: #04230F;
+    color: white;
+    border-radius: 15%;
+    border: 10px solid black;
+}
+
+.refreshButton {
+    font-size: 150%;
+    background-color: #04230F;
+    color: white;
+    border-radius: 20%;
+    border: 10px solid black;
+}
+
+
+
+@media screen and (min-width: 2000px) {
+    .player-collum {
+        width: 20%;
+        padding-top: 2.75%;
+        float: left;
+        padding-left: 15%;
+        padding-top: 2.15%;
+        text-align: left;
+        font-size: 2.5rem;
+    }
+    
+    .dealer-collum {
+        width: 20%;
+        float: right;
+        padding-right: 15%;
+        text-align: right;
+        font-size: 2.5rem;
+       
+    }
+    
+    .button-collum {
+        padding-left: 35%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .game {
+        color: white;
+        padding-top: 15%;
+    }
+    
+    .hitButton {
+        font-size: 150%;
+        background-color: #04230F;
+        color: white;
+        border-radius: 15%;
+        border: 10px solid black;
+    }
+    
+    .stayButton {
+        font-size: 150%;
+        background-color: #04230F;
+        color: white;
+        border-radius: 15%;
+        border: 10px solid black;
+    }
+    
+    .refreshButton {
+        font-size: 150%;
+        background-color: #04230F;
+        color: white;
+        border-radius: 20%;
+        border: 10px solid black;
+    }
+}

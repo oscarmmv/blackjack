@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <h1 class= "title">♠ Black Jack ♠</h1>
+        <div class= "wrapper">
+            <div class="game">
+                <div class= "player-collum">
+                    <h3>Player cards:</h3>
+                    <div id="player-hand"></div>
+                    <br>
+                    <h3>Player hand value:</h3>
+                    <div id="player-hand-value"></div>
+                </div>
+                <br><br><br>
+                <div class= "dealer-collum"> 
+                    <h3>Dealer cards:</h3>
+                    <div id="dealer-hand"></div>
+                    <br>
+                    <h3>Dealer hand value:</h3>
+                    <div id="dealer-hand-value"></div>
+                </div>
+                <br><br>
+                <div class= "button-collum">
+                    <button class= "hitButton" id="hit" onclick="hit();">Hit</button>
+                    <button class= "stayButton" id="stay" onclick="stay();">Stay</button>
+                    <h2 id='result'></h2>
+                    <button class= "refreshButton" id="play-again" onclick="refresh();">&#10227;</button>
+                </div>
+            </div>
+            <br>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
+
