@@ -68,7 +68,9 @@ function hit() {
 }
 
 function stay() {
-    if(getDealerHandValue() > 21 && getPlayerHandValue > 21){
+    if(getDealerHandValue() > 21 && getPlayerHandValue > 21) {
+        document.getElementById("result").innerHTML = "TIE!"
+    } else if(getDealerHandValue() == getPlayerHandValue()) {
         document.getElementById("result").innerHTML = "TIE!"
     } else {
         if(getDealerHandValue() > getPlayerHandValue() && getDealerHandValue() <= 21 ) {
