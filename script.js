@@ -101,7 +101,3 @@ document.getElementById("player-hand-value").innerHTML = getPlayerHandValue();
 
 document.getElementById("dealer-hand").innerHTML = dealerHand;
 document.getElementById("dealer-hand-value").innerHTML = getDealerHandValue();
-
-
-
-
