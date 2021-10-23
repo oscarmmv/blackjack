@@ -49,10 +49,13 @@ function hit() {
     playerHand.push(drawRandomSuit(cardSuit));
     document.getElementById("player-hand").innerHTML = playerHand;
     document.getElementById("player-hand-value").innerHTML = getPlayerHandValue();
-    if(getPlayerHandValue() > 21){
+    if(getDealerHandValue() > 21 && getPlayerHandValue() > 21) {
+        document.getElementById("result").innerHTML = "TIE!"
+    } else if(getDealerHandValue() == getPlayerHandValue()) {
+        document.getElementById("result").innerHTML = "TIE!"
+    } else if(getPlayerHandValue() > 21){
         document.getElementById("result").innerHTML = "PLAYER: BUST!"
         disableButton();
-        
     }
 
     if(getDealerHandValue() < getPlayerHandValue() && getDealerHandValue() < 15) {
@@ -60,7 +63,11 @@ function hit() {
         dealerHand.push(drawRandomSuit(cardSuit));
         document.getElementById("dealer-hand").innerHTML = dealerHand;
         document.getElementById("dealer-hand-value").innerHTML = getDealerHandValue();
-        if(getDealerHandValue() > 21){
+        if(getDealerHandValue() > 21 && getPlayerHandValue() > 21) {
+            document.getElementById("result").innerHTML = "TIE!"
+        } else if(getDealerHandValue() == getPlayerHandValue()) {
+            document.getElementById("result").innerHTML = "TIE!"
+        } else if(getDealerHandValue() > 21){
             document.getElementById("result").innerHTML = "DEALER: BUST!"
             disableButton();
         }
@@ -101,7 +108,3 @@ document.getElementById("player-hand-value").innerHTML = getPlayerHandValue();
 
 document.getElementById("dealer-hand").innerHTML = dealerHand;
 document.getElementById("dealer-hand-value").innerHTML = getDealerHandValue();
-
-
-
-
