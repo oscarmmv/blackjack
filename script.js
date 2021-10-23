@@ -49,8 +49,12 @@ function hit() {
     document.getElementById("player-hand").innerHTML = playerHand;
     document.getElementById("player-hand-value").innerHTML = getPlayerHandValue();
     if(getPlayerHandValue() > 21){
-        document.getElementById("result").innerHTML = "PLAYER: BUST!"
-        disableButton();
+        if(getDealerHandValue() > 21){
+            document.getElementById("result").innerHTML = "TIE!"
+        } else {
+            document.getElementById("result").innerHTML = "PLAYER: BUST!"
+            disableButton();
+        }
         
     }
 
@@ -60,8 +64,12 @@ function hit() {
         document.getElementById("dealer-hand").innerHTML = dealerHand;
         document.getElementById("dealer-hand-value").innerHTML = getDealerHandValue();
         if(getDealerHandValue() > 21){
-            document.getElementById("result").innerHTML = "DEALER: BUST!"
-            disableButton();
+            if(getPlayerHandValue() > 21){
+                document.getElementById("result").innerHTML = "TIE!"
+            } else {
+                document.getElementById("result").innerHTML = "DEALER: BUST!"
+                disableButton();
+            }
         }
     }
 }
@@ -109,3 +117,7 @@ document.getElementById("player-hand-value").innerHTML = getPlayerHandValue();
 
 document.getElementById("dealer-hand").innerHTML = dealerHand;
 document.getElementById("dealer-hand-value").innerHTML = getDealerHandValue();
+
+
+
+
