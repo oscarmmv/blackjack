@@ -91,9 +91,20 @@ function stay() {
     } else if((getPlayerHandValue() == getDealerHandValue() && getPlayerHandValue() <= 21)) {
         document.getElementById("result").innerHTML = "TIE!"
         disableButton();
-    } else{
-        document.getElementById("result").innerHTML = "DEALER WINS!"
-        disableButton();
+    } else if(getDealerHandValue() > 21) {
+        if(getPlayerHandValue > 21) {
+            document.getElementById("result").innerHTML = "TIE!"
+        } else {
+            document.getElementById("result").innerHTML = "PLAYER WINS!"
+            disableButton();
+        }
+    } else if(getPlayerHandValue() > 21) {
+        if(getPlayerHandValue > 21) {
+            document.getElementById("result").innerHTML = "TIE!"
+        } else {
+            document.getElementById("result").innerHTML = "DEALER WINS!"
+            disableButton();
+        }
     }
 }
 
