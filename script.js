@@ -35,12 +35,10 @@ function startBlackjack() {
     playerHand = [drawRandomValue(cardValue), drawRandomSuit(cardSuit), drawRandomValue(cardValue), drawRandomSuit(cardSuit)]
     dealerHand = [drawRandomValue(cardValue), drawRandomSuit(cardSuit), drawRandomValue(cardValue), drawRandomSuit(cardSuit)]
     if(getPlayerHandValue() > 21){
-        document.getElementById("result").innerHTML = "PLAYER: BUST!"
-        disableButton();
+        refresh();
     }
     if(getDealerHandValue() > 21){
-        document.getElementById("result").innerHTML = "DEALER: BUST!"
-        disableButton();
+        refresh();
     }
 }
 
