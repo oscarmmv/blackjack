@@ -43,6 +43,7 @@ function disableButton() {
     document.getElementById("stay").disabled = true;
 }
 
+
 function hit() {
     playerHand.push(drawRandomValue(cardValue));
     playerHand.push(drawRandomSuit(cardSuit));
@@ -67,15 +68,15 @@ function hit() {
 }
 
 function stay() {
-    if(getDealerHandValue() > 21 && getPlayerHandValue >21 ) {
+    if(getDealerHandValue() > 21 && getPlayerHandValue > 21){
         document.getElementById("result").innerHTML = "TIE!"
     } else {
-        if(getPlayerHandValue() > getDealerHandValue() && getPlayerHandValue() <= 21) {
+        if(getDealerHandValue() > getPlayerHandValue() && getDealerHandValue() <= 21 ) {
+            document.getElementById("result").innerHTML = "DEALER WINS!"
+        } 
+        if(getPlayerHandValue() > getDealerHandValue() && getPlayerHandValue() <= 21 ) {
             document.getElementById("result").innerHTML = "PLAYER WINS!"
-        }
-        if(getDealerHandValue() > getPlayerHandValue() && getDealerHandValue() <= 21) {
-            document.getElementById("result").innerHTML = "PLAYER WINS!"
-        }
+        } 
     }
 }
 
