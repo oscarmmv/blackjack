@@ -34,12 +34,6 @@ function getDealerHandValue() {
 function startBlackjack() {
     playerHand = [drawRandomValue(cardValue), drawRandomSuit(cardSuit), drawRandomValue(cardValue), drawRandomSuit(cardSuit)]
     dealerHand = [drawRandomValue(cardValue), drawRandomSuit(cardSuit), drawRandomValue(cardValue), drawRandomSuit(cardSuit)]
-    if(getPlayerHandValue() > 21){
-        refresh();
-    }
-    if(getDealerHandValue() > 21){
-        refresh();
-    }
 }
 
 startBlackjack();
@@ -115,7 +109,3 @@ document.getElementById("player-hand-value").innerHTML = getPlayerHandValue();
 
 document.getElementById("dealer-hand").innerHTML = dealerHand;
 document.getElementById("dealer-hand-value").innerHTML = getDealerHandValue();
-
-
-
-
