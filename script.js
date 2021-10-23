@@ -67,25 +67,14 @@ function hit() {
 }
 
 function stay() {
-    if(getPlayerHandValue() > getDealerHandValue() && getPlayerHandValue() <= 21) {
-        document.getElementById("result").innerHTML = "PLAYER WINS!"
-        disableButton();
-    } else if((getPlayerHandValue() == getDealerHandValue() && getPlayerHandValue() <= 21)) {
+    if(getDealerHandValue() > 21 && getPlayerHandValue >21 ) {
         document.getElementById("result").innerHTML = "TIE!"
-        disableButton();
-    } else if(getDealerHandValue() > 21) {
-        if(getPlayerHandValue > 21) {
-            document.getElementById("result").innerHTML = "TIE!"
-        } else {
+    } else {
+        if(getPlayerHandValue() > getDealerHandValue() && getPlayerHandValue() <= 21) {
             document.getElementById("result").innerHTML = "PLAYER WINS!"
-            disableButton();
         }
-    } else if(getPlayerHandValue() > 21) {
-        if(getPlayerHandValue > 21) {
-            document.getElementById("result").innerHTML = "TIE!"
-        } else {
-            document.getElementById("result").innerHTML = "DEALER WINS!"
-            disableButton();
+        if(getDealerHandValue() > getPlayerHandValue() && getDealerHandValue() <= 21) {
+            document.getElementById("result").innerHTML = "PLAYER WINS!"
         }
     }
 }
