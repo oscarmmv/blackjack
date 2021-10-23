@@ -1,4 +1,4 @@
-var cardValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+var cardValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10];
 let cardSuit = ['&#9829;', '&#9827;', '&#9830;' , '&#9824;'];
 
 function drawRandomValue(cardValue) {
