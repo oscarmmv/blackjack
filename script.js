@@ -75,7 +75,7 @@ function hit() {
 }
 
 function stay() {
-    while(getDealerHandValue() < getPlayerHandValue() && getDealerHandValue() < 15) {
+    while(getDealerHandValue() =< getPlayerHandValue() && getDealerHandValue() < 15) {
         dealerHand.push(drawRandomValue(cardValue));
         dealerHand.push(drawRandomSuit(cardSuit));
         document.getElementById("dealer-hand").innerHTML = dealerHand;
