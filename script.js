@@ -68,6 +68,16 @@ function hit() {
 }
 
 function stay() {
+    while(getDealerHandValue() < getPlayerHandValue() && getDealerHandValue() < 15) {
+        dealerHand.push(drawRandomValue(cardValue));
+        dealerHand.push(drawRandomSuit(cardSuit));
+        document.getElementById("dealer-hand").innerHTML = dealerHand;
+        document.getElementById("dealer-hand-value").innerHTML = getDealerHandValue();
+        if(getDealerHandValue() > 21){
+            document.getElementById("result").innerHTML = "DEALER: BUST!"
+            disableButton();
+        }
+    }
     if(getDealerHandValue() > 21 && getPlayerHandValue > 21) {
         document.getElementById("result").innerHTML = "TIE!"
     } else if(getDealerHandValue() == getPlayerHandValue()) {
